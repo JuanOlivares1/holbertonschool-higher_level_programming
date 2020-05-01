@@ -10,7 +10,7 @@ if __name__ == "__main__":
     op = argv[2]
     b = int(argv[3])
     if op == "+":
-        foo = add(a , b)
+        foo = add(a, b)
     elif op == "-":
         foo = sub(a, b)
     elif op == "*":
