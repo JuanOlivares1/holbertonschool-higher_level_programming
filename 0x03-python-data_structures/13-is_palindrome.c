@@ -9,28 +9,19 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int i, j, rtn = 1;
-	int list_len = 0, half, lasthalf;
-	listint_t *head2, *current, *back, *foward;
+	int i, j, rtn = 1, len = 0, lasthalf;
+	listint_t *head2, *back, *foward;
 
 	head2 = *head;
 	if (!head2)
 		return (rtn);
-	current = head2;
-	while (current->next != NULL)
-	{
-		list_len++;
-		current = current->next;
-	}
-	list_len++;
-
-	half = list_len / 2;
-	lasthalf = list_len - half;
+	len = list_len(head);
+	lasthalf = len - (len / 2);
 	for (i = 0; i < lasthalf; i++)
 	{
 		foward = head2;
 		back = head2;
-		for (j = 1; j <= (list_len - i - 1); j++)
+		for (j = 1; j <= (len - i - 1); j++)
 		{
 			back = back->next;
 		}
@@ -45,4 +36,23 @@ int is_palindrome(listint_t **head)
 		}
 	}
 	return (rtn);
+}
+
+/**
+ * list_len - says if a list is palindrome
+ * @head: list's head
+ *
+ * Return: 1 if is palidrome, 0 otherwise
+ */
+int list_len(listint_t **head)
+{
+	listint_t *head2 = *head;
+	int i;
+
+	while (head2 != NULL)
+	{
+		head2 = head2->next;
+		i++;
+	}
+	return (i);
 }
