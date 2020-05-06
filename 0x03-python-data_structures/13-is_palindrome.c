@@ -9,10 +9,9 @@
 int is_palindrome(listint_t **head)
 {
 	int i, j, rtn = 1, len = 0, lasthalf;
-	listint_t *head2, *back, *foward;
+	listint_t *back, *foward;
 
-	head2 = *head;
-	if (!head2)
+	if (!(*head))
 		return (rtn);
 
 	while (back != NULL)
@@ -23,8 +22,8 @@ int is_palindrome(listint_t **head)
 	lasthalf = len - (len / 2);
 	for (i = 0; i < lasthalf; i++)
 	{
-		foward = head2;
-		back = head2;
+		foward = *head;
+		back = *head;
 		for (j = 1; j <= (len - i - 1); j++)
 		{
 			back = back->next;
