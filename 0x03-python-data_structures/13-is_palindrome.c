@@ -49,7 +49,7 @@ int list_len(listint_t **head)
 	listint_t *head2 = *head;
 	int i;
 
-	while (head2 != NULL)
+	while (head2->next != NULL)
 	{
 		head2 = head2->next;
 		i++;
