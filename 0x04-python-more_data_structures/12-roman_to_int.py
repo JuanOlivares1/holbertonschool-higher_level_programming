@@ -5,12 +5,12 @@ def roman_to_int(roman_string):
     res = 0;
     for letter in roman_string:
         val = values[letter]
-        if res == 0:
-            temp = val
+        if res != 0:
             res += val
-            continue
-        res += val
-        if temp < val:
-            res -= (temp * 2)
-        temp = val
+            if temp < val:
+                res -= (temp * 2)
+            temp = val
+        else:
+            res += val
+            temp = val
     return res
