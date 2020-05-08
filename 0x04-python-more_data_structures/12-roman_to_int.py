@@ -5,9 +5,9 @@ def roman_to_int(roman_string):
                   'C': 100, 'L': 50,
                   'X': 10, 'V': 5, 'I': 1}
         res, temp = 0, 0
-        for letter in reversed(roman_string):
+        for letter in roman_string:
             val = values[letter]
-            val = val if val >= temp else -val
+            val = val if temp >= val else -val
             res += val
             temp = val
         return res
