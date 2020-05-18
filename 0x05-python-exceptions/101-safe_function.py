@@ -3,7 +3,7 @@ def safe_function(fct, *args):
     from sys import stderr
     res = None
     try:
-        res = fct(args[0], args[1])
+        res = fct(*args)
     except ZeroDivisionError as zde:
         print("Exception: {}".format(zde), file=stderr)
     except IndexError as ie:
