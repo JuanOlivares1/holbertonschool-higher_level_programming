@@ -4,9 +4,7 @@ def safe_function(fct, *args):
     res = None
     try:
         res = fct(*args)
-    except ZeroDivisionError as zde:
-        print("Exception: {}".format(zde), file=stderr)
-    except IndexError as ie:
-        print("Exception: {}".format(ie), file=stderr)
+    except Exception as ex:
+        print("Exception: {}".format(ex), file=stderr)
     finally:
         return res
