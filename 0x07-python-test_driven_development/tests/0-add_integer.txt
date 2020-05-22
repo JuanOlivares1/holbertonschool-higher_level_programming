@@ -77,9 +77,9 @@ Test for "0-add_integer" module
     Traceback (most recent call last):
     TypeError: b must be an integer
 
-    >>> add_integer("hola", "soy pedro")
+    >>> add_integer("hola", "soy pedro") #doctest: +ELLIPSIS
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: ... must be an integer
 
 ---------------------------------------------------------
 -->list
@@ -104,9 +104,9 @@ Test for "0-add_integer" module
     Traceback (most recent call last):
     TypeError: b must be an integer
 
-    >>> add_integer(["list", 123, (1,2), 3.1416], ["list", 123, (1,2), 3.1416])
+    >>> add_integer(["list", 123, (1,2), 3.1416], ["list", 123, (1,2), 3.1416]) #doctest: +ELLIPSIS
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: ... must be an integer
 
 ------------------------------------------------------------
 -->tuple
@@ -131,9 +131,9 @@ Test for "0-add_integer" module
     Traceback (most recent call last):
     TypeError: b must be an integer
 
-    >>> add_integer((1,2,3), (1,2,3))
+    >>> add_integer((1,2,3), (1,2,3)) #doctest: +ELLIPSIS
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: ... must be an integer
 
 ------------------------------------------------------------
 -->dictionary
@@ -158,9 +158,9 @@ Test for "0-add_integer" module
     Traceback (most recent call last):
     TypeError: b must be an integer
 
-    >>> add_integer({"hola": 123, "pi": 3.1416, "pedro": "navaja"}, {"hola": 123, "pi": 3.1416, "pedro": "navaja"})
+    >>> add_integer({"hola": 123, "pi": 3.1416, "pedro": "navaja"}, {"hola": 123, "pi": 3.1416, "pedro": "navaja"}) #doctest: +ELLIPSIS
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: ... must be an integer
 
 ------------------------------------------------------------
 -->complex numbers
@@ -185,9 +185,9 @@ Test for "0-add_integer" module
     Traceback (most recent call last):
     TypeError: b must be an integer
 
-    >>> add_integer(complex(1234567890j), complex(1234567890j))
+    >>> add_integer(complex(1234567890j), complex(1234567890j)) #doctest: +ELLIPSIS
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: ... must be an integer
 
 ------------------------------------------------------------
 -->None
@@ -212,9 +212,9 @@ Test for "0-add_integer" module
     Traceback (most recent call last):
     TypeError: b must be an integer
 
-    >>> add_integer(None, None)
+    >>> add_integer(None, None) #doctest: +ELLIPSIS
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: ... must be an integer
 
 
 ------------------------------------------------------------
@@ -258,3 +258,7 @@ Test for "0-add_integer" module
     >>> add_integer(float("inf"), float("inf"))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
+
+===========================================================
+END OF TEST
+===========================================================
