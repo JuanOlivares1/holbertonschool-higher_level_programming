@@ -12,16 +12,11 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
-    # getters
+    # getters & setters
     @property
     def width(self):
         return self.__width
 
-    @property
-    def height(slef):
-        return self.__height
-
-    # setters
     @width.setter
     def width(self, width):
         if type(width) != int:
@@ -30,6 +25,10 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = width
+
+    @property
+    def height(slef):
+        return self.__height
 
     @height.setter
     def height(self, height):
