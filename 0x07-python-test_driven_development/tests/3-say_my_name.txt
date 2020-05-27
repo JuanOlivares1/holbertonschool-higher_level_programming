@@ -8,16 +8,16 @@ Test for "3-say_my_name" module
 --------------------------------------------------------------------------------
 - normal use
     >>> say_my_name("John", "Smith")
-    John Smith
+    My name is John Smith
 
     >>> say_my_name("Walter", "White")
-    Walter White
+    My name is Walter White
 
     >>> say_my_name("Bob")
-    Bob 
+    My name is Bob 
 
     >>> say_my_name("Pedro ")
-    Pedro  
+    My name is Pedro  
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
