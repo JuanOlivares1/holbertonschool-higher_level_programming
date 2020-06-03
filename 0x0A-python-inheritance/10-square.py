@@ -1,4 +1,4 @@
-#!/usr/bin/pthon3
+#!/usr/bin/python3
 """Module - defing 'is_same_class' function
 """
 Rectangle = __import__('9-rectangle').Rectangle

@@ -1,4 +1,4 @@
-#!/usr/bin/pthon3
+#!/usr/bin/python3
 """Module - defing 'is_same_class' function
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
