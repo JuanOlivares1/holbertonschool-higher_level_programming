@@ -1,9 +1,9 @@
 #!/usr/bin/pthon3
 """Module - defing 'is_same_class' function
 """
-
-
 Rectangle = __import__('9-rectangle').Rectangle
+
+
 class Square(Rectangle):
     """Class Square - defines a square
 
