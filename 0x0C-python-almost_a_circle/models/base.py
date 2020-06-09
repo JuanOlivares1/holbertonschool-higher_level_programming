@@ -29,7 +29,6 @@ class Base():
             return "[]"
         return json.dumps(list_dictionaries)
 
-
     @staticmethod
     def to_json_string(list_dictionaries):
         """dict 2 string
@@ -41,3 +40,18 @@ class Base():
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """writes the JSON string representation of list_objs to a file
+        Args:
+            cls (class)
+            list_objs (list)"""
+        li = []
+        with open(cls.__name__ + ".json", mode="w") as fl:
+            if list_objs is None:
+                fl.write(Base.to_json_string(list_objs))
+                return
+            for i in list_objs:
+                li.append(i.to_dictionary())
+            fl.write(Base.to_json_string(li))
