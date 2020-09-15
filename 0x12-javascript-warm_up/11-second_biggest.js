@@ -3,9 +3,8 @@ const argv = process.argv.slice(2);
 let max;
 
 if (argv[1]) {
-  argv.sort(function (a, b) { return Number(b) - Number(a); });
-  max = argv[0];
+  max = argv.sort(function (a, b) { return Number(b) - Number(a); })[0];
 } else {
   max = 0;
 }
-console.log(max);
+console.log(Number(max));
