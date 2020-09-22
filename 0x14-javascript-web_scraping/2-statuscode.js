@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
 const request = require('request');
-request(process.argv[2], function (error, response, body) {
-  (error) ? console.error('error:', error) : console.log('statusCode:', response && response.statusCode);
+request(process.argv[2], function (_erro, response) {
+  console.log('code:', response && response.statusCode);
 });
