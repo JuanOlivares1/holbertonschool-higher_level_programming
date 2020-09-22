@@ -10,10 +10,10 @@ request(process.argv[2], function (error, response, data) {
     for (const film of JSON.parse(data).results) {
       for (const character of film.characters) {
         if (character.includes('18')) {
-          aux += 1;
+          counter += 1;
         }
       }
     }
-    console.log(aux);
+    console.log(counter);
   }
 });
